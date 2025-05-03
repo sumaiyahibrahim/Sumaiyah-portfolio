@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32">
+  <!-- White background with pink border -->
+  <circle cx="16" cy="16" r="15" fill="white" stroke="#ec4899" stroke-width="2" />
+  
+  <!-- Sparkle symbol (✦) in pink -->
+  <text x="16" y="22" font-family="Arial, sans-serif" font-size="20" text-anchor="middle" fill="#ec4899" font-weight="bold">✦</text>
+</svg>
