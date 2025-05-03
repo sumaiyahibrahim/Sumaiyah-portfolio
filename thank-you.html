@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thank You - Sumaiyah's Portfolio</title>
+    
+    <!-- Original Sparkle Favicon -->
+    <link rel="icon" href="assets/favicon-sparkle.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="assets/favicon-sparkle.svg">
+    <meta name="theme-color" content="#ec4899">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        .thank-you-container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 100px 20px;
+            text-align: center;
+            min-height: 70vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        
+        .thank-you-icon {
+            font-size: 80px;
+            color: #ec4899;
+            margin-bottom: 30px;
+            animation: bounce 2s infinite;
+        }
+        
+        .thank-you-title {
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+            color: #333;
+        }
+        
+        .thank-you-message {
+            font-size: 1.2rem;
+            color: #666;
+            margin-bottom: 40px;
+            line-height: 1.6;
+        }
+        
+        .return-home {
+            display: inline-block;
+            padding: 12px 24px;
+            background-color: #ec4899;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            border: 2px solid #000;
+            box-shadow: 4px 4px 0 #000;
+        }
+        
+        .return-home:hover {
+            transform: translateY(-3px);
+            box-shadow: 6px 6px 0 #000;
+        }
+        
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% {
+                transform: translateY(0);
+            }
+            40% {
+                transform: translateY(-20px);
+            }
+            60% {
+                transform: translateY(-10px);
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <header>
+        <nav class="navbar">
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li class="separator">✦</li>
+                <li><a href="hire-me.html">Hire Me</a></li>
+                <li class="separator">✦</li>
+                <li><a href="connect.html">Connect</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="thank-you-container">
+        <div class="thank-you-icon">
+            <i class="fas fa-check-circle"></i>
+        </div>
+        <h1 class="thank-you-title">Thank You!</h1>
+        <p class="thank-you-message">Your message has been successfully sent. I appreciate you taking the time to reach out and will get back to you as soon as possible!</p>
+        <a href="index.html" class="return-home">Return to Home</a>
+    </div>
+
+    <!-- Simple Footer Section -->
+    <footer class="simple-footer">
+        <div class="footer-content">
+            <div class="horizontal-links">
+                <ul class="footer-links-horizontal">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="hire-me.html">Hire Me</a></li>
+                    <li><a href="connect.html">Connect</a></li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p class="footer-bottom-text">Built with 💻, ☕, and way too many late nights — Sumaiyah © 2025</p>
+            <div class="footer-social">
+                <a href="https://www.linkedin.com/in/sumaiyah-ibrahim-27049a284" target="_blank" rel="noopener noreferrer" class="social-link"><i class="fab fa-linkedin"></i></a>
+                <a href="https://github.com/sumaiyahibrahim" target="_blank" rel="noopener noreferrer" class="social-link"><i class="fab fa-github"></i></a>
+                <a href="mailto:sumaiyahibrahim15@gmail.com" class="social-link"><i class="fas fa-envelope"></i></a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

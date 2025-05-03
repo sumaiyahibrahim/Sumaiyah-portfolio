@@ -1,0 +1,96 @@
+/* Device Alert Styles */
+.device-alert {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgba(255, 255, 255, 0.98);
+  border: 2px solid #ec4899;
+  border-radius: 15px;
+  padding: 15px 20px;
+  width: 90%;
+  max-width: 350px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  z-index: 9999;
+  display: none;
+  text-align: center;
+  animation: slideUp 0.5s ease forwards;
+  opacity: 1;
+}
+
+.device-alert-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.device-alert-icon {
+  font-size: 24px;
+  color: #ec4899;
+  margin-bottom: 10px;
+}
+
+.device-alert-message {
+  font-family: 'Poppins', sans-serif;
+  font-size: 14px;
+  color: #4a4a4a;
+  margin-bottom: 15px;
+  line-height: 1.4;
+}
+
+.device-alert-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  width: 100%;
+}
+
+.device-alert-continue {
+  background-color: #ec4899;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  padding: 8px 15px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 12px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.device-alert-dismiss {
+  background-color: transparent;
+  color: #4a4a4a;
+  border: 1px solid #4a4a4a;
+  border-radius: 20px;
+  padding: 8px 15px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 12px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.device-alert-continue:hover {
+  background-color: #d03d85;
+}
+
+.device-alert-dismiss:hover {
+  background-color: #f5f5f5;
+}
+
+@keyframes slideUp {
+  0% {
+    opacity: 0;
+    transform: translate(-50%, 20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(-50%, 0);
+  }
+}
+
+/* Hide alert on desktop */
+@media screen and (min-width: 992px) {
+  .device-alert {
+    display: none !important;
+  }
+}

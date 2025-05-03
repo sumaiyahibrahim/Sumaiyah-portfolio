@@ -1,0 +1,255 @@
+/* Enhanced Card Styling */
+
+/* LeetCode Stats Styling - Ultra Compact */
+.leetcode-stats {
+  margin: 8px 0;
+  background: rgba(255, 255, 255, 0.5);
+  padding: 6px 8px;
+  border-radius: 6px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+  font-size: 11px;
+}
+
+.micro-header {
+  font-weight: 600;
+  color: #444;
+  font-size: 12px;
+  margin-bottom: 5px;
+  text-align: center;
+}
+
+.micro-stats {
+  margin-bottom: 5px;
+}
+
+.micro-row {
+  display: flex;
+  align-items: center;
+  margin-bottom: 3px;
+  font-size: 10px;
+}
+
+.micro-row span:first-child {
+  width: 15px;
+  font-weight: 500;
+  color: #555;
+}
+
+.micro-row span:last-child {
+  width: 40px;
+  text-align: right;
+  color: #666;
+}
+
+.micro-bar {
+  flex: 1;
+  height: 4px;
+  background: rgba(0, 0, 0, 0.05);
+  border-radius: 2px;
+  margin: 0 4px;
+  overflow: hidden;
+}
+
+.micro-fill {
+  height: 100%;
+  border-radius: 2px;
+}
+
+.micro-fill.easy {
+  background: #A1EEBD;
+}
+
+.micro-fill.medium {
+  background: #FFD1DC;
+}
+
+.micro-fill.hard {
+  background: #FFA69E;
+}
+
+.micro-footer {
+  display: flex;
+  justify-content: space-around;
+  font-size: 10px;
+  color: #555;
+  margin-top: 4px;
+  text-align: center;
+}
+
+.micro-footer span {
+  background: rgba(248, 248, 225, 0.5);
+  padding: 2px 6px;
+  border-radius: 8px;
+  transition: all 0.2s ease;
+}
+
+.micro-footer span:hover {
+  background: rgba(248, 248, 225, 0.8);
+}
+
+/* Fun Facts List Enhancements */
+.fun-facts-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.fun-facts-list li {
+  padding: 10px 15px;
+  margin-bottom: 10px;
+  background: rgba(248, 248, 225, 0.5);
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.fun-facts-list li:hover {
+  background: rgba(248, 248, 225, 0.8);
+  transform: translateX(5px);
+}
+
+/* ===== RESPONSIVE DESIGN FOR CARDS ===== */
+
+/* Tablets and Small Desktops (768px to 991px) */
+@media (min-width: 768px) and (max-width: 991px) {
+  .cards-section {
+    padding: 20px;
+  }
+  
+  .card {
+    width: 100%;
+    margin-bottom: 30px;
+  }
+  
+  .fun-facts-list li {
+    padding: 8px 12px;
+    margin-bottom: 8px;
+    font-size: 0.9rem;
+  }
+  
+  .learning-columns {
+    flex-direction: column;
+    gap: 30px;
+  }
+  
+  .column-separator {
+    display: none;
+  }
+  
+  .learning-column {
+    width: 100%;
+  }
+  
+  .learning-item {
+    padding: 12px;
+  }
+  
+  .learning-details h4 {
+    font-size: 0.95rem;
+  }
+}
+
+/* Mobile Devices (up to 767px) */
+@media (max-width: 767px) {
+  .cards-section {
+    padding: 15px;
+  }
+  
+  .card {
+    width: 100%;
+    margin-bottom: 25px;
+    padding: 15px;
+  }
+  
+  .pricing-plan {
+    font-size: 1.2rem;
+  }
+  
+  .fun-facts-list li {
+    padding: 8px 10px;
+    margin-bottom: 8px;
+    font-size: 0.85rem;
+    line-height: 1.4;
+  }
+  
+  .learning-columns {
+    flex-direction: column;
+    gap: 25px;
+    padding: 15px;
+  }
+  
+  .column-separator {
+    display: none;
+  }
+  
+  .learning-column {
+    width: 100%;
+  }
+  
+  .column-title {
+    font-size: 1rem;
+  }
+  
+  .learning-item {
+    padding: 10px;
+  }
+  
+  .learning-details h4 {
+    font-size: 0.9rem;
+  }
+  
+  .tech-list p {
+    font-size: 0.85rem;
+    margin-bottom: 5px;
+  }
+  
+  .learning-links {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+  
+  .learning-link {
+    font-size: 0.85rem;
+    padding: 5px 10px;
+  }
+}
+
+/* Small Mobile Devices (up to 575px) */
+@media (max-width: 575px) {
+  .cards-section {
+    padding: 10px;
+  }
+  
+  .card {
+    padding: 12px;
+    margin-bottom: 20px;
+  }
+  
+  .pricing-plan {
+    font-size: 1.1rem;
+    margin-bottom: 12px;
+  }
+  
+  .fun-facts-list li {
+    padding: 7px 10px;
+    margin-bottom: 7px;
+    font-size: 0.8rem;
+  }
+  
+  .learning-columns {
+    padding: 12px;
+  }
+  
+  .learning-item {
+    padding: 8px;
+  }
+  
+  .learning-details h4 {
+    font-size: 0.85rem;
+    margin-bottom: 8px;
+  }
+  
+  .tech-list p {
+    font-size: 0.8rem;
+  }
+}

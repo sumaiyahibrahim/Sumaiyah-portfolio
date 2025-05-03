@@ -1,0 +1,437 @@
+/* 
+ * Hire Me Page Styles
+ * Specific styles for the Hire Me page in Sumaiyah's Portfolio
+ */
+
+/* ===== STACKING CARDS EFFECT ===== */
+:root {
+  --card-height: 40vw;
+  --card-margin: 4vw;
+  --card-top-offset: 1em;
+  --numcards: 3;
+  --outline-width: 0px;
+}
+
+#stacking-cards {
+  padding-bottom: calc(var(--numcards) * var(--card-top-offset)); /* Make place at bottom, as items will slide to that position*/
+  margin-bottom: var(--card-margin); /* Don't include the --card-margin in padding, as that will affect the scroll-timeline*/
+  list-style: none;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(var(--numcards), var(--card-height));
+  gap: var(--card-margin);
+}
+
+.stacking-card {
+  position: sticky;
+  top: 0;
+  padding-top: var(--card-top-offset);
+  transform-origin: 50% 0%;
+  will-change: transform;
+}
+
+.stacking-card__content {
+  box-shadow: 0 0.2em 1em rgba(0, 0, 0, 0.1), 0 1em 2em rgba(0, 0, 0, 0.1);
+  background: rgb(255, 255, 255);
+  color: rgb(10, 5, 7);
+  border-radius: 1em;
+  overflow: hidden;
+  display: grid;
+  grid-template-areas: "text img";
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto;
+  align-items: stretch;
+  height: 100%;
+}
+
+.stacking-card__content > div {
+  grid-area: text;
+  width: 80%;
+  place-self: center;
+  text-align: left;
+  display: grid;
+  gap: 1em;
+  place-items: start;
+  padding: 2em;
+}
+
+.stacking-card__content > figure {
+  grid-area: img;
+  overflow: hidden;
+}
+
+.stacking-card__content > figure > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.stacking-card h2 {
+  font-weight: 300;
+  font-size: 2.5em;
+  margin-bottom: 0.5em;
+  color: #333;
+  font-family: 'Poppins', sans-serif;
+}
+
+.stacking-card p {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 300;
+  line-height: 1.5;
+  margin-bottom: 1em;
+  color: #555;
+}
+
+.stacking-card strong {
+  font-weight: 600;
+  color: #333;
+}
+
+/* ===== HIRE ME LIST STYLES ===== */
+.hire-me-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 1.5em 0;
+}
+
+.hire-me-list li {
+  margin-bottom: 0.8em;
+  padding-left: 1.5em;
+  position: relative;
+  line-height: 1.4;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* ===== CONTACT LINKS STYLES ===== */
+.contact-links {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8em;
+  margin-bottom: 1.5em;
+}
+
+.contact-link {
+  color: #555;
+  text-decoration: none;
+  font-family: 'Poppins', sans-serif;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+}
+
+.contact-link span {
+  margin-right: 0.5em;
+  font-size: 1.2em;
+}
+
+.contact-link:hover {
+  color: #333;
+  transform: translateX(5px);
+}
+
+/* ===== BUTTON STYLES ===== */
+.stacking-btn {
+  background: #FFD580;
+  color: #333;
+  text-decoration: none;
+  display: inline-block;
+  padding: 0.8em 1.5em;
+  border-radius: 0.5em;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.stacking-btn:hover {
+  background: #FFECB3;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* ===== HIRE ME CARD STYLES ===== */
+.hire-me-card {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: #FFF8DC;
+  z-index: 9999;
+  overflow: auto;
+  box-shadow: none;
+  border-radius: 0;
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.hire-me-card .pricing-block-content {
+  padding: 2rem;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.hire-me-card .pricing-plan {
+  color: #333;
+  font-weight: 700;
+  margin-bottom: 2rem;
+  font-size: 2.5rem;
+  text-align: center;
+}
+
+/* ===== CLOSE BUTTON STYLES ===== */
+.close-button {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  font-size: 24px;
+  cursor: pointer;
+  background: rgba(255, 255, 255, 0.8);
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease;
+  z-index: 10000;
+}
+
+.close-button:hover {
+  transform: rotate(90deg);
+}
+
+/* ===== CALL TO ACTION STYLES ===== */
+.call-to-action {
+  margin-top: 2rem;
+  text-align: center;
+  max-width: 800px;
+  padding: 2rem;
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.call-to-action h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+  color: #333;
+  font-weight: 700;
+}
+
+.call-to-action p {
+  margin-bottom: 2rem;
+  color: #555;
+  font-size: 1.2rem;
+  line-height: 1.6;
+}
+
+.cta-buttons {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+
+.cta-button {
+  background: linear-gradient(135deg, #ff6b8b, #ff8e53);
+  color: white;
+  text-decoration: none;
+  padding: 15px 30px;
+  border-radius: 30px;
+  font-weight: 600;
+  font-size: 1.1rem;
+  transition: all 0.3s ease;
+  display: inline-block;
+}
+
+.cta-button:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px rgba(255, 107, 139, 0.4);
+}
+
+/* ===== BODY SCROLL CONTROL ===== */
+body.no-scroll {
+  overflow: hidden;
+}
+
+/* ===== HIRE ME BACKGROUND ELEMENTS ===== */
+.hire-me-bg-elements {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: -1;
+}
+
+.floating-circle {
+  position: absolute;
+  border-radius: 50%;
+  opacity: 0.15;
+}
+
+.circle-1 {
+  width: 300px;
+  height: 300px;
+  background: linear-gradient(135deg, #ff6b8b, #ff8e53);
+  top: -100px;
+  right: -50px;
+  animation: float 15s ease-in-out infinite;
+}
+
+.circle-2 {
+  width: 200px;
+  height: 200px;
+  background: linear-gradient(135deg, #6b8bff, #53a9ff);
+  bottom: 100px;
+  left: -50px;
+  animation: float 18s ease-in-out infinite reverse;
+}
+
+.circle-3 {
+  width: 150px;
+  height: 150px;
+  background: linear-gradient(135deg, #8bff6b, #53ffa9);
+  bottom: -50px;
+  right: 30%;
+  animation: float 12s ease-in-out infinite;
+}
+
+.floating-square {
+  position: absolute;
+  opacity: 0.1;
+  transform: rotate(45deg);
+}
+
+.square-1 {
+  width: 100px;
+  height: 100px;
+  background: #ff6b8b;
+  top: 30%;
+  left: 10%;
+  animation: float 20s ease-in-out infinite;
+}
+
+.square-2 {
+  width: 80px;
+  height: 80px;
+  background: #6b8bff;
+  top: 70%;
+  right: 15%;
+  animation: float 25s ease-in-out infinite reverse;
+}
+
+/* ===== ANIMATION KEYFRAMES ===== */
+@keyframes float {
+  0% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+  25% {
+    transform: translate(10px, 15px) rotate(5deg);
+  }
+  50% {
+    transform: translate(5px, -10px) rotate(10deg);
+  }
+  75% {
+    transform: translate(-10px, 5px) rotate(5deg);
+  }
+  100% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+}
+
+/* ===== RESPONSIVE ADJUSTMENTS ===== */
+@media (max-width: 768px) {
+  :root {
+    --card-height: 80vw;
+  }
+  
+  .stacking-card__content {
+    grid-template-areas: 
+      "img"
+      "text";
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr auto;
+  }
+  
+  .stacking-card__content > div {
+    width: 90%;
+    padding: 1.5em;
+  }
+  
+  .stacking-card h2 {
+    font-size: 2em;
+  }
+  
+  .hire-me-card .pricing-plan {
+    font-size: 2rem;
+  }
+  
+  .call-to-action h2 {
+    font-size: 1.8rem;
+  }
+  
+  .call-to-action p {
+    font-size: 1rem;
+  }
+  
+  .cta-button {
+    padding: 12px 24px;
+    font-size: 1rem;
+  }
+}
+
+/* ===== HIRE ME HOVER EFFECT ===== */
+/* Hover effect with "Let's work together" text */
+.hire-container {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.work-together-text {
+  position: absolute;
+  top: -50px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #ec4899;
+  color: white;
+  font-size: 16px;
+  font-weight: 600;
+  font-family: 'Poppins', sans-serif;
+  padding: 8px 16px;
+  border-radius: 20px;
+  opacity: 0;
+  transition: all 0.3s ease;
+  z-index: 10;
+  white-space: nowrap;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* Small arrow pointing down */
+.work-together-text::after {
+  content: '';
+  position: absolute;
+  bottom: -8px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-width: 8px 8px 0 8px;
+  border-style: solid;
+  border-color: #ec4899 transparent transparent transparent;
+}
+
+/* Show the text on hover */
+.hire-container:hover .work-together-text {
+  opacity: 1;
+  top: -60px;
+}

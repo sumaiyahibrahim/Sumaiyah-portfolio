@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page Not Found - Sumaiyah's Portfolio</title>
+    
+    <!-- Original Sparkle Favicon -->
+    <link rel="icon" href="assets/favicon-sparkle.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="assets/favicon-sparkle.svg">
+    <meta name="theme-color" content="#ec4899">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        .error-container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 100px 20px;
+            text-align: center;
+            min-height: 70vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        
+        .error-icon {
+            font-size: 80px;
+            color: #ec4899;
+            margin-bottom: 30px;
+            animation: float 3s ease-in-out infinite;
+        }
+        
+        .error-title {
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+            color: #333;
+        }
+        
+        .error-message {
+            font-size: 1.2rem;
+            color: #666;
+            margin-bottom: 40px;
+            line-height: 1.6;
+        }
+        
+        .return-home {
+            display: inline-block;
+            padding: 12px 24px;
+            background-color: #ec4899;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            border: 2px solid #000;
+            box-shadow: 4px 4px 0 #000;
+        }
+        
+        .return-home:hover {
+            transform: translateY(-3px);
+            box-shadow: 6px 6px 0 #000;
+        }
+        
+        @keyframes float {
+            0% {
+                transform: translateY(0px);
+            }
+            50% {
+                transform: translateY(-20px);
+            }
+            100% {
+                transform: translateY(0px);
+            }
+        }
+        
+        .floating-decoration {
+            position: absolute;
+            opacity: 0.6;
+            z-index: -1;
+        }
+        
+        .decoration-1 {
+            top: 15%;
+            left: 10%;
+            animation: float 4s ease-in-out infinite;
+        }
+        
+        .decoration-2 {
+            top: 20%;
+            right: 10%;
+            animation: float 5s ease-in-out infinite;
+        }
+        
+        .decoration-3 {
+            bottom: 15%;
+            left: 15%;
+            animation: float 6s ease-in-out infinite;
+        }
+        
+        .decoration-4 {
+            bottom: 20%;
+            right: 15%;
+            animation: float 7s ease-in-out infinite;
+        }
+        
+        @media (max-width: 768px) {
+            .error-title {
+                font-size: 2.5rem;
+            }
+            
+            .error-icon {
+                font-size: 60px;
+            }
+            
+            .floating-decoration {
+                max-width: 60px;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .error-title {
+                font-size: 2rem;
+            }
+            
+            .error-message {
+                font-size: 1rem;
+            }
+            
+            .error-icon {
+                font-size: 50px;
+            }
+            
+            .floating-decoration {
+                max-width: 40px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <header>
+        <nav class="navbar">
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li class="separator">✦</li>
+                <li><a href="hire-me.html">Hire Me</a></li>
+                <li class="separator">✦</li>
+                <li><a href="connect.html">Connect</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Decorative elements -->
+    <img src="assets/sparklefloat.png" alt="Sparkle" class="floating-decoration decoration-1" width="80">
+    <img src="assets/heartfloat.png" alt="Heart" class="floating-decoration decoration-2" width="80">
+    <img src="assets/ribbonfloat.png" alt="Ribbon" class="floating-decoration decoration-3" width="80">
+    <img src="assets/cloudfloat.png" alt="Cloud" class="floating-decoration decoration-4" width="80">
+
+    <div class="error-container">
+        <div class="error-icon">
+            <i class="fas fa-compass"></i>
+        </div>
+        <h1 class="error-title">Oops! Page Not Found</h1>
+        <p class="error-message">It seems you've wandered into uncharted territory. The page you're looking for doesn't exist or has been moved.</p>
+        <a href="index.html" class="return-home">Return to Home</a>
+    </div>
+
+    <!-- Simple Footer Section -->
+    <footer class="simple-footer">
+        <div class="footer-content">
+            <div class="horizontal-links">
+                <ul class="footer-links-horizontal">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="hire-me.html">Hire Me</a></li>
+                    <li><a href="connect.html">Connect</a></li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p class="footer-bottom-text">Built with 💻, ☕, and way too many late nights — Sumaiyah © 2025</p>
+            <div class="footer-social">
+                <a href="https://www.linkedin.com/in/sumaiyah-ibrahim-27049a284" target="_blank" rel="noopener noreferrer" class="social-link"><i class="fab fa-linkedin"></i></a>
+                <a href="https://github.com/sumaiyahibrahim" target="_blank" rel="noopener noreferrer" class="social-link"><i class="fab fa-github"></i></a>
+                <a href="mailto:sumaiyahibrahim15@gmail.com" class="social-link"><i class="fas fa-envelope"></i></a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
